@@ -17,7 +17,7 @@ Mas também será ótimo se você conhecer:
 - Jenkins
 - RabbitMQ
 
-Acha que se enquadra no pefil? Temos um teste abaixo para entendermos mais seu conhecimento.
+Acha que se enquadra no perfil? Temos um teste abaixo para entendermos mais seu conhecimento.
 
 
 ## Problema
