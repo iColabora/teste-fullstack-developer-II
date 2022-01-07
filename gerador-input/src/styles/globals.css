@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --color-background: #F8EDEB;
+    --color-primary: #D8E2DC;
+    --white: #fff;
+    --gray: #898989;
+    --black: #000;
+
+    --spacing-nano: .5rem;
+    --spacing-xxxs: 1rem;
+    --spacing-xxs: 1.5rem;
+    --spacing-xs: 2rem;
+
+    --font-size-sm: 0.5rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.5rem;
+
+    --shadow: 0 0 1rem var(--gray);
+}
+
+#app {
+    padding: 0;
+    height: 100vh;
+    background: var(--color-background);
+    display: flex;
+    flex-direction: column;
+}
+
+select, button {
+    cursor: pointer;
+}
