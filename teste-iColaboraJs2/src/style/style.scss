@@ -1,0 +1,65 @@
+$padding: 5px;
+$border: 1px solid #000;
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+}
+
+input{
+    margin-top: 5px;
+}
+
+.campos{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.camposCriados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    flex-wrap: wrap;
+}
+
+.camposCriados input{
+    padding: 5px;
+}
+
+.camposCriados button{
+    width: 60px;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    flex-wrap: wrap;
+}
+
+label{
+    text-align: center;
+}
+
+#campo1,#campo2,#campo3{
+    padding: $padding;
+    border: $border;
+    border-radius: 5px;
+    margin: 5px;
+    height: 36px;
+    outline: 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+}
+
