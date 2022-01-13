@@ -54,6 +54,6 @@ Renderizar os campos que foram parametrizados previamente e o usuário conseguir
 
 
 ## Submissão
-Para iniciar o teste, faça um fork deste repositório, crie uma branch com o seu nome completo e depois envie-nos o pull request. Se você apenas clonar o repositório não vai conseguir fazer push e depois vai ser mais complicado fazer o pull request. **Importante**: Após finalizar o teste, mandar um email para rh@icolabora.com com o seu currículo e pretensão 😄
+Para iniciar o teste, faça um fork deste repositório, crie uma branch com o seu nome completo e depois envie-nos o pull request. Se você apenas clonar o repositório não vai conseguir fazer push e depois vai ser mais complicado fazer o pull request. **Importante**: Após finalizar o teste, revisaremos e informaremos sua aprovação ou não. Se for aprovado, mandar um email para rh@icolabora.com com o seu currículo e pretensão 😄
 
 Boa sorte! =D
