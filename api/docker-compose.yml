@@ -1,0 +1,34 @@
+version: "3.1"
+services:
+  db:
+    image: mongo:4.2
+    container_name: db
+    restart: always
+    ports:
+      - ${DB_PORT}:27017
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      DB_CLUSTER: ${DB_CLUSTER}
+      PORT: ${PORT}
+      DB_CONNECTION: ${DB_CONNECTION}
+
+  api:
+    image: node:latest
+    container_name: api
+    restart: always
+    env_file:
+     - .env
+    depends_on:
+      - db
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: npm run dev
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"

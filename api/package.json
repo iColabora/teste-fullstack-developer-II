@@ -1,0 +1,34 @@
+{
+  "name": "@lucassanttoss/api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod": "NODE_ENV=production node src/server.js",
+    "wsl": "CHOKIDAR_USEPOLLING=true nodemon src/server.js",
+    "dev": "nodemon dotenv/config src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "mongodb": "^4.3.0",
+    "mongoose": "^6.1.6",
+    "pino": "^7.6.3",
+    "pino-pretty": "^7.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "docs/*",
+      "node_modules/*"
+    ],
+    "delay": 2500
+  }
+}
