@@ -91,6 +91,7 @@ function App() {
                         icon: 'success',
                         title: 'Respostas salvas com sucesso!'
                     })
+                    document.getElementById('subit-form').remove();
                 } else {
                     Toast.fire({
                         icon: 'error',
@@ -153,7 +154,7 @@ function App() {
                     <div>
                         <h1>Uhull</h1>
                         <h3>Tudo certo, agora é só finalizar o questionário.</h3>
-                        <button onClick={() => handleSaveAnswers()}>Finalizar</button>
+                        <button id="subit-form" onClick={() => handleSaveAnswers()}>Finalizar</button>
                     </div>
                 </div>
             </div>
