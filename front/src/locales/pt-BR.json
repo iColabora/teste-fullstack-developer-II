@@ -1,0 +1,42 @@
+{
+  "languages": {
+    "pt-BR": "Português",
+    "en-US": "Inglês"
+  },
+  "toast": {
+    "fields": {
+      "notFound": "Campo não encontrado",
+      "idInUse": "Já existe um campo com este ID"
+    }
+  },
+  "types": {
+    "text": "Texto",
+    "bigtext": "Texto Longo",
+    "combo": "Combo"
+  },
+  "form": {
+    "id": {
+      "label": "ID",
+      "placeholder": "Entre com o ID"
+    },
+    "label": {
+      "label": "Rótulo",
+      "placeholder": "Entre com o rótulo"
+    },
+    "type": {
+      "label": "Tipo",
+      "placeholder": "Selecione o tipo"
+    },
+    "options": {
+      "label": "Opções",
+      "placeholder": "Adicione até 3 opções",
+      "max": "Max 3 opções"
+    },
+    "required": "{name} é obrigatório",
+    "cancel": "Cancelar",
+    "save": "Salvar"
+  },
+  "fields": {
+    "title": "Campos do Formulário"
+  }
+}

@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: docker.io/bitnami/mongodb
+    ports:
+      - '$MONGODB_PORT:27017'
+    environment:
+      - 'MONGODB_USERNAME=$MONGODB_USERNAME'
+      - 'MONGODB_PASSWORD=$MONGODB_PASSWORD'
+      - 'MONGODB_ROOT_PASSWORD=$MONGODB_PASSWORD'
+      - 'MONGODB_DATABASE=$MONGODB_DATABASE'

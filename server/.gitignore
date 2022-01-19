@@ -1,0 +1,12 @@
+.idea/
+.vscode/
+node_modules/
+build/
+dist/
+temp/
+.env
+.env.local
+.env.staging
+.env.prod
+coverage
+ormconfig.json

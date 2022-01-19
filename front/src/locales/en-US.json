@@ -1,0 +1,42 @@
+{
+  "languages": {
+    "pt-BR": "Portuguese",
+    "en-US": "English"
+  },
+  "toast": {
+    "fields": {
+      "notFound": "Field not found",
+      "idInUse": "Already exists a field with this ID"
+    }
+  },
+  "types": {
+    "text": "Text",
+    "bigtext": "Big Text",
+    "combo": "Combo"
+  },
+  "form": {
+    "id": {
+      "label": "ID",
+      "placeholder": "Enter the ID"
+    },
+    "label": {
+      "label": "Label",
+      "placeholder": "Enter the label"
+    },
+    "type": {
+      "label": "Type",
+      "placeholder": "Choose a type"
+    },
+    "options": {
+      "label": "Options",
+      "placeholder": "Add up to 3 options",
+      "max": "Max 3 opções"
+    },
+    "required": "{name} ir required",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "fields": {
+    "title": "Form Fields"
+  }
+}
