@@ -1,0 +1,18 @@
+$border-radius-table: 5px;
+
+.form-style-7{
+	max-width:400px;
+	background:#fff;
+ border-bottom-left-radius: $border-radius-table;
+ border-bottom-right-radius: $border-radius-table;
+	padding:20px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form-style-7 h1{
+	display: block;
+	text-align: center;
+	padding: 0;
+	margin: 0px 0px 20px 0px;
+	color: #5C5C5C;
+	font-size:x-large;
+}

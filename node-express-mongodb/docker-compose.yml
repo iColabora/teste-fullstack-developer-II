@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  server:
+    container_name: NODEJS_SERVER_ICOLABORA
+    build: '.'
+    volumes:
+      - ./:/node-app
+      - ./node_modules:/node-app/node_modules
+    environment:
+      NODE_ENV: development
+      PORT: ${PORT}
+      PORT_PUBLISHED: ${PORT_PUBLISHED}
+    depends_on:
+      - db
+    links:
+      - db
+    ports:
+      - ${PORT_PUBLISHED}:${PORT}
+
+  db:
+    image: 'mongo'
+    container_name: MONGODB_ICOLABORA
+    ports:
+      - '5002:5002'
+    volumes:
+      - mongo:/data/db
+
+volumes:
+  mongo:
+    name: icolabora_mongo

@@ -1,0 +1,30 @@
+$margin: 2vh;
+
+div {
+ color: hsl(0, 0%, 0%);
+ font-size: 1em;
+ margin-top: 30px;
+ margin-bottom: 29px;
+ 
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+ &::before,
+ &::after {
+   content: '';
+   display: block;
+   height: 0.09em;
+   min-width: 130px;
+ }
+ 
+ &::before {
+   background: linear-gradient(to right, hsl(0, 0%, 100%), hsl(210, 30%, 24%));
+   margin-right: $margin;
+ }
+ 
+ &::after {
+   background: linear-gradient(to left, hsl(0, 0%, 100%), hsl(210, 30%, 24%));
+   margin-left: $margin;
+ } 
+}

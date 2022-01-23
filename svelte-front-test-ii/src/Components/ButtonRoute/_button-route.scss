@@ -1,0 +1,27 @@
+$margin: 0 0 0.5em;
+$border-radius-table: 5px;
+
+.route{
+ cursor: pointer;
+}
+
+.button_route{
+ width: 90%;
+ min-width: fit-content;
+ overflow: auto;
+ margin-top:  var(--marginTop);
+ margin-bottom: 25px;
+
+ &__title{
+  background-color: hsl(51, 82%, 85%);
+  padding: 10px 20px;
+  border-radius: $border-radius-table;
+
+  h1 {
+   margin-top: 10px;
+   margin-bottom: 5px;
+   text-align: center;
+   font-size: 0.875em;
+  }
+ }
+}

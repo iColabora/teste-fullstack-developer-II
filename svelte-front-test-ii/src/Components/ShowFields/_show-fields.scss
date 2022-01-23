@@ -1,0 +1,46 @@
+$border-radius-table: 5px;
+
+$margin: 0 0 0.5em;
+$border-radius-table: 5px;
+
+.new_field{
+	width: 90%;
+    max-width: 400px;
+    overflow: auto;
+    margin-bottom: 25px;
+
+    &__title{
+        background-color: hsl(0, 0%, 100%);
+        padding: 18px 10px;
+        border-top-left-radius: $border-radius-table;
+        border-top-right-radius: $border-radius-table;
+
+        h1 {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+    }
+
+    &__fields{
+        color: blue;
+    }
+    
+}
+
+.form-style-7{
+	max-width:400px;
+	background:#fff;
+ border-bottom-left-radius: $border-radius-table;
+ border-bottom-right-radius: $border-radius-table;
+	padding:20px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form-style-7 h1{
+	display: block;
+	text-align: center;
+	padding: 0;
+	margin: 0px 0px 20px 0px;
+	color: #5C5C5C;
+	font-size:x-large;
+}

@@ -1,0 +1,29 @@
+$border-radius-table: 5px;
+
+.title{
+    background-color:hsl(0, 0%, 100%);
+    border-bottom-left-radius: $border-radius-table;
+    border-bottom-right-radius: $border-radius-table;
+    border-top: 1px solid #878787;
+    border-left: 1px solid #878787;
+    border-right: 1px solid #878787;
+    width: 80%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    color: hsl(0, 0%, 0%);
+    padding: 25px 50px 5px 50px;
+    letter-spacing: 4px;
+}
+
+@media (min-width: 700px) {
+    .title{
+        width: 600px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+}

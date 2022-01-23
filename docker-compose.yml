@@ -1,0 +1,50 @@
+version: '3'
+
+services:
+  server:
+    container_name: NODEJS_SERVER_ICOLABORA
+    build:
+      context: ./node-express-mongodb
+    environment:
+      NODE_ENV: development
+    depends_on:
+      - db
+    ports:
+      - 5001:5001
+    networks:
+      - icolabora-network
+
+  db:
+    image: 'mongo'
+    container_name: MONGODB_ICOLABORA
+    ports:
+      - '5002:5002'
+    volumes:
+      - mongo:/data/db
+    networks:
+      - icolabora-network
+
+  violeta:
+    container_name: FRONT_SVELTE_ICOLABORA
+    image: 'front-svelte'
+    build:
+      context: ./svelte-front-test-ii
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=development
+      - BACK_HOST=server
+    depends_on:
+      - server
+    links:
+      - server
+    networks:
+      - icolabora-network
+
+volumes:
+  mongo:
+    name: icolabora_mongo
+
+networks:
+  icolabora-network:
+    driver: bridge
