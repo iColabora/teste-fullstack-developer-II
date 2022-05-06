@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  database:
+    image: postgres
+    container_name: database_teste
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: icolabora
+      POSTGRES_DB: db_fields
+    volumes:
+      - pgdata:/data/postgres
+
+  app:
+    build: .
+    container_name: api_fields
+    restart: always
+    ports:
+      - 3333:3333
+      - 9229:9229
+    volumes:
+      - .:/usr/app
+    links:
+      - database
+    depends_on:
+      - database
+
+volumes:
+  pgdata:
+    driver: local
