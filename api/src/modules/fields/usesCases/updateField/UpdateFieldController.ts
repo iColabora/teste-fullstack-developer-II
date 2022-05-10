@@ -6,7 +6,7 @@ import { UpdateFieldUseCase } from "./UpdateFieldUseCase";
 class UpdateFieldController {
   async handle(request: Request, response: Response): Promise<Response> {
     try {
-      const { fieldId, label, position, type, inputValue } = request.body;
+      const { fieldId, label, position, type, typeRules } = request.body;
 
       const updateFieldUseCase = container.resolve(UpdateFieldUseCase);
 
@@ -15,7 +15,7 @@ class UpdateFieldController {
         label,
         position,
         type,
-        inputValue,
+        typeRules,
       });
 
       return response

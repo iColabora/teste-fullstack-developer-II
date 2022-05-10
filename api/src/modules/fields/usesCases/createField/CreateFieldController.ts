@@ -6,7 +6,7 @@ import { CreateFieldUseCase } from "./CreateFieldUseCase";
 class CreateFieldController {
   async handle(request: Request, response: Response): Promise<Response> {
     try {
-      const { fieldId, label, type, position, inputValue } = request.body;
+      const { fieldId, label, type, position, typeRules } = request.body;
 
       const createFieldUseCase = container.resolve(CreateFieldUseCase);
 
@@ -15,7 +15,7 @@ class CreateFieldController {
         label,
         type,
         position,
-        inputValue,
+        typeRules,
       });
 
       return response

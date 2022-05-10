@@ -25,9 +25,8 @@ export class CreateFieldTable1651794724055 implements MigrationInterface {
             enum: ["text", "bigtext", "combo"],
           },
           {
-            name: "inputValue",
+            name: "typeRules",
             type: "json",
-            isNullable: true,
           },
           {
             name: "created_at",

@@ -1,6 +1,9 @@
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
 
-import { IInputValueDTO } from "../repositories/IFieldsRepository";
+import {
+  IComboValueDTO,
+  ITextRulesDTO,
+} from "../repositories/IFieldsRepository";
 
 @Entity("fields")
 class Field {
@@ -21,10 +24,18 @@ class Field {
   position: number;
 
   @Column({ type: "json", nullable: true })
-  inputValue: IInputValueDTO | null;
+  typeRules?: IComboValueDTO | ITextRulesDTO;
 
   @CreateDateColumn()
   created_at: Date;
+
+  constructor() {
+    if (!this.typeRules) {
+      this.typeRules = {
+        maxlength: this.type === "text" ? 30 : 100,
+      };
+    }
+  }
 }
 
 export { Field };

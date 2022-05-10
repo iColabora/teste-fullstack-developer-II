@@ -1,6 +1,6 @@
 import { Field } from "../entities/Field";
 
-interface IInputValueDTO {
+interface IComboValueDTO {
   firstOption: {
     description: string;
     value: string;
@@ -17,12 +17,16 @@ interface IInputValueDTO {
   };
 }
 
+interface ITextRulesDTO {
+  maxlength: number;
+}
+
 interface ICreateFieldDTO {
   fieldId?: string;
   label: string;
   type: "text" | "bigtext" | "combo";
   position: number;
-  inputValue: IInputValueDTO | null;
+  typeRules: IComboValueDTO | ITextRulesDTO;
 }
 
 interface IFieldsRepository {
@@ -41,7 +45,7 @@ interface IFieldsRepository {
     label,
     type,
     position,
-    inputValue,
+    typeRules,
   }: ICreateFieldDTO): Promise<void>;
 
   create({
@@ -49,8 +53,8 @@ interface IFieldsRepository {
     label,
     type,
     position,
-    inputValue,
+    typeRules,
   }: ICreateFieldDTO): Promise<void>;
 }
 
-export { IFieldsRepository, ICreateFieldDTO, IInputValueDTO };
+export { IFieldsRepository, ICreateFieldDTO, IComboValueDTO, ITextRulesDTO };

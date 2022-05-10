@@ -15,14 +15,14 @@ class FieldsRepository implements IFieldsRepository {
     label,
     position,
     type,
-    inputValue,
+    typeRules,
   }: ICreateFieldDTO): Promise<void> {
     const field = this.repository.create({
       fieldId,
       label,
       position,
       type,
-      inputValue,
+      typeRules,
     });
 
     await this.repository.save(field);
@@ -33,14 +33,14 @@ class FieldsRepository implements IFieldsRepository {
     label,
     position,
     type,
-    inputValue,
+    typeRules,
   }: ICreateFieldDTO): Promise<void> {
     const field = this.repository.create({
       fieldId,
       label,
       position,
       type,
-      inputValue,
+      typeRules,
     });
     await this.repository.update(field.fieldId, field);
   }

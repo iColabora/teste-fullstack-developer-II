@@ -6,7 +6,7 @@ import {
 } from "../../repositories/IFieldsRepository";
 
 @injectable()
-class UpdateFieldUseCase {
+class CreateFieldUseCase {
   constructor(
     @inject("FieldsRepository")
     private fieldsRepository: IFieldsRepository
@@ -17,30 +17,38 @@ class UpdateFieldUseCase {
     label,
     position,
     type,
-    inputValue,
+    typeRules,
   }: ICreateFieldDTO): Promise<void> {
-    const field = await this.fieldsRepository.findByFieldId(fieldId);
+    const fieldAlreadyExists = await this.fieldsRepository.findByFieldId(
+      fieldId
+    );
 
-    if (!field) {
-      throw new Error("Ops. O campo a ser atualizado não existe!");
+    if (fieldAlreadyExists) {
+      throw new Error("Ops. O Campo já está em uso!");
     }
 
     const fieldWithPosition = await this.fieldsRepository.findByPosition(
       position
     );
 
-    if (fieldWithPosition && fieldWithPosition.fieldId !== field.fieldId) {
+    if (fieldWithPosition) {
       throw new Error("Ops. A posição selecionada já está em uso!");
     }
 
-    await this.fieldsRepository.update({
+    const countFields = await this.fieldsRepository.count();
+
+    if (countFields >= 5) {
+      throw new Error("Não é possível adicionar mais campos, o limite é 5. :(");
+    }
+
+    await this.fieldsRepository.create({
       fieldId,
       label,
       position,
       type,
-      inputValue,
+      typeRules,
     });
   }
 }
 
-export { UpdateFieldUseCase };
+export { CreateFieldUseCase };
