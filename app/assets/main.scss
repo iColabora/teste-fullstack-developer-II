@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
+$color-app: #9e63d5;
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: $color-app;
+}
+
+.loading-error {
+  color: $color-app;
+  font-size: 2rem;
+}
+
+.content {
+  background-color: white;
+  border-radius: 25px;
+  margin-top: 10vh;
+  padding: 1em;
+}
+
+.buttons {
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  button {
+    padding: 8px;
+    border-radius: 25px;
+    margin: 5px;
+    color: white;
+    border: 0;
+  }
+
+  .create {
+    background-color: #d55959;
+  }
+
+  .create:hover {
+    background-color: white;
+    border: 1px solid #d55959;
+    color: #d55959;
+    font-weight: bolder;
+    padding: 7px;
+  }
+
+  .fill {
+    background-color: #00a6ff;
+  }
+
+  .fill:hover {
+    background-color: white;
+    border: 1px solid #00a6ff;
+    color: #00a6ff;
+    font-weight: bolder;
+    padding: 7px;
+  }
+
+  .create:active {
+    box-shadow: 0 0 0.5em #c93e3e;
+  }
+
+  .fill:active {
+    box-shadow: 0 0 0.5em #0570ab;
+  }
+}
+
+.table-fields {
+  width: 100%;
+  color: white;
+  max-height: 300px;
+  overflow-y: scroll;
+
+  td {
+    padding: 0.6em;
+    border-radius: 25px;
+  }
+
+  thead {
+    background-color: white;
+    color: $color-app;
+
+    tr th {
+      padding: 0.5em;
+    }
+  }
+
+  tbody {
+    color: #333333;
+
+    tr:hover {
+      background-position: left;
+      filter: brightness(80%);
+    }
+
+  }
+
+  tfoot {
+    background-color: #424242;
+  }
+}
