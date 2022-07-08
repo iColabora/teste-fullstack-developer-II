@@ -1,0 +1,12 @@
+div[class*="col"] {
+  position: relative;
+}
+
+label[class="form-label"] {
+  position: absolute;
+  font-size: 0.8rem;
+  color: rgb(49, 49, 49);
+  top: -10px;
+  left: 12px;
+  background-color: white;
+}

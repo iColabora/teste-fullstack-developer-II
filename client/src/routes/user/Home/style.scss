@@ -1,0 +1,22 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 32px auto;
+  max-width: 1140px;
+  width: 100vw;
+  padding: 0 2rem;
+  height: 100%;
+  gap: 1rem;
+
+  h2 {
+    margin-bottom: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: rgb(49, 49, 49);
+  }
+
+  button[type="button"] {
+    margin-top: 2rem;
+  }
+}

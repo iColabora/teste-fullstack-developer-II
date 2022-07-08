@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px "Poppins", Arial, sans-serif;
+  color: #121214;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+input,
+textarea {
+  font-family: "Poppins";
+}
+
+button,
+.checkmark {
+  cursor: pointer;
+}
