@@ -3,17 +3,16 @@ import { useEffect, useState } from "react";
 import "./style.scss";
 import Input from "../../../components/Input";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function Home() {
-  const [inputs, setInputs] = useState<InputType[]>(() => {
-    const storagedInputs = localStorage.getItem("@form:ChrisCoy");
-    if (storagedInputs) {
-      return JSON.parse(storagedInputs);
-    }
-    return [];
-  });
+  const [inputs, setInputs] = useState<InputType[]>([]);
 
-  console.log(localStorage.getItem("@form:ChrisCoy"));
+  useEffect(() => {
+    axios.post("http://localhost:3001/get-inputs").then((response) => {
+      setInputs(response.data[0].inputs);
+    });
+  }, []);
 
   return (
     <div className="formContainer">

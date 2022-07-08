@@ -19,28 +19,22 @@ mongoose
   .then(() => console.log("Conectado ao BD"))
   .catch((err) => console.log("Erro ao se conectar " + err));
 
+app.post("/get-inputs", (req, res) => {
+  Input.find().then((results) => {
+    res.send(200, results);
+  });
+});
+
 app.post("/save-inputs", (req, res) => {
   var cont = 0;
-  const inputs = req.body.map((input) => {
-    new Input({
-      id: input._id,
-      label: input.label,
-      type: input.type,
-      options1: input.options1,
-      options2: input.options2,
-      options3: input.options3,
+  new Input({ inputs: req.body })
+    .save()
+    .then(() => {
+      res.send(200, "Success!");
     })
-      .save()
-      .then(() => {
-        cont++;
-      });
-  });
-
-  if (cont === req.body.length) {
-    res.send("Success!");
-  } else {
-    res.send("Error!");
-  }
+    .catch((err) => {
+      res.send(500, `Error! ${err}`);
+    });
 });
 
 app.post("/teste", (req, res) => {
