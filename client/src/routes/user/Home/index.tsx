@@ -10,7 +10,8 @@ export default function Home() {
 
   useEffect(() => {
     axios.post("http://localhost:3001/get-inputs").then((response) => {
-      setInputs(response.data[0].inputs);
+      console.log(response);
+      setInputs(response.data.inputs);
     });
   }, []);
 
