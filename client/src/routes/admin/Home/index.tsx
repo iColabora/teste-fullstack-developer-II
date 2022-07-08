@@ -3,6 +3,7 @@ import { useState } from "react";
 import InputControl from "../../../components/InputControl";
 import "./style.scss";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function Home() {
   const inputTemplate: InputType = {
@@ -21,10 +22,12 @@ export default function Home() {
   const [input5, setInput5] = useState<InputType>(inputTemplate);
 
   function handleSaveButton() {
-    localStorage.setItem(
-      "@form:ChrisCoy",
-      JSON.stringify([input1, input2, input3, input4, input5])
-    );
+    axios
+      .post("http://localhost:3001/save-inputs", [input1, input2, input3, input4, input5])
+      .then((response) => {
+        console.log(response);
+      });
+
     setInput1(inputTemplate);
     setInput2(inputTemplate);
     setInput3(inputTemplate);
