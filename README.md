@@ -1,59 +1,34 @@
-# Teste II - Fullstack Development
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Um pouco sobre nós
+## Getting Started
 
-Estamos procurando uma pessoa desenvolvedora que possa agregar em nosso time, principalmente quem gosta de propor soluções e inovações. Estamos montando nosso novo time de Produtos e pra isso precisamos de pessoas que conheçam:
+First, run the development server:
 
-- Front-end: Angular, React ou VueJS ♥️
-- Backend: NodeJS 
-- Banco de Dados: SQL / Um pouco de NoSQL
-- GIT
-- Ter trabalhado antes em equipes ágeis e multidisciplinares
+```bash
+npm run dev
+# or
+yarn dev
+```
 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Mas também será ótimo se você conhecer:
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-- Docker e Docker-compose
-- Jenkins
-- RabbitMQ
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-Acha que se enquadra no perfil? Temos um teste abaixo para entendermos mais seu conhecimento.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+## Learn More
 
-## Problema
+To learn more about Next.js, take a look at the following resources:
 
-Um cliente deseja criar 5 campos de forma parametrizável, sendo que ele vai definir:
-- Label a ser exibido
-- Id do campo
-- Tipo de campo (texto simples, texto grande, ou combo)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-**Restrições:**
-- Se o tipo de campo for texto, o máximo de caracteres é 30;
-- Se o tipo de campo for texto grande, o máximo de caracteres é 100;
-- Se o tipo de campo for combo, ele pode cadastrar até 3 opções.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-**Proposta**:
+## Deploy on Vercel
 
-Renderizar os campos que foram parametrizados previamente e o usuário conseguir preencher os campos e salvar (em uma base de dados*)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-**Tecnologias que esperamos**:
-
-**Front:**
-- Algum framework JS (Angular, React, Vue ♥️)
-- Pré-processador de estilo (SASS, Stylus, SCSS, etc)
-
-**Back:**
-- NodeJS
-
-**Armazenamento:**
-- A sua escolha (NoSQL, SQL, Cache): MySQL, MongoDB, ElasticSearch, Postgres, Node-cache, Redis, etc.
-
-**Docker**:
-- Dockerfile
-- Docker-compose
-
-
-## Submissão
-Para iniciar o teste, faça um fork deste repositório, crie uma branch com o seu nome completo e depois envie-nos o pull request. Se você apenas clonar o repositório não vai conseguir fazer push e depois vai ser mais complicado fazer o pull request. **Importante**: Após finalizar o teste, revisaremos e informaremos sua aprovação ou não. Se for aprovado, mandar um email para rh@icolabora.com com o seu currículo e pretensão 😄
-
-Boa sorte! =D
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
