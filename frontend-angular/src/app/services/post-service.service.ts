@@ -9,7 +9,7 @@ export class PostServiceService {
   constructor(private http: HttpClient) { }
 
   postPostagem(post: Object) {
-    this.http.post('http://localhost:8080/api/postagem', post)
-      .subscribe(data => console.log(data));
+    return this.http.post('http://localhost:8080/api/postagem', post)
+      .subscribe(data => data);
   }
 }
