@@ -14,7 +14,7 @@ O teste foi resolvido utilizando as seguintes tecnologias:
 ### Backend
 O driver de dados utilizado é o MySQL e as
 credenciais utilizadas estão no arquivo **.env** junto com a porta utilizada pelo express.
-
+O nome do banco de dados utilizado é ``teste_developer_II``.
 > ## .env
 >
 >- port=8080
@@ -27,4 +27,6 @@ Para iniciar o servidor, basta iniciar o cmd na pasta **/backend** e digitar ``n
 ### Frontend
 Para iniciar o Angular, basta iniciar o cmd na pasta **/frontend-angular** e digitar ``ng serve``.
 
+**PS:** Não se esqueça de rodar o comando ``npm update`` em cada pasta para baixar as dependências do NodeJS e do Angular!!
+** **
 **Espero que goste!** 😊
