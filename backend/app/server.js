@@ -1,5 +1,7 @@
 const express = require('express');
-require('dotenv-safe').config();
+require('dotenv-safe').config({
+    allowEmptyValues: true
+});
 const app = express();
 const port = process.env.port;
 
