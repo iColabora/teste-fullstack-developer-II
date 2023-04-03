@@ -1,6 +1,7 @@
 const express = require('express');
+require('dotenv-safe').config();
 const app = express();
-const port = 8080;
+const port = process.env.port;
 
 const server = app.listen(port, (err, callback) => {
     if(err) {
