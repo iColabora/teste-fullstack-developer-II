@@ -1,0 +1,25 @@
+<div class="container text-light mt-5" *ngIf="this.campos.length > 0">
+    <h1>Formulário</h1>
+    <form (ngSubmit)="enviarForm()">
+      <div class="mb-3" *ngFor="let item of this.campos; let i = index;">
+        <label for="formInput" class="form-label">{{this.campos[i].label}}</label>
+        <div [ngSwitch]="this.campos[i].tipo">
+          <input [(ngModel)]="this.resposta[i]" name="respostaTexto" type="text" class="form-control" id="formInput" placeholder="{{this.campos[i].label}}" maxlength="30" *ngSwitchCase="0">
+          <textarea [(ngModel)]="this.resposta[i]" name="respostaTextoGrande" class="form-control" id="formInput" placeholder="{{this.campos[i].label}}" maxlength="100"  *ngSwitchCase="1">
+          </textarea>
+          <div *ngSwitchCase="2">
+            <div class="form-check" *ngFor="let field of this.campos[i].boxFields; let j = index;">
+              <input (change)="onCheckBox($event, this.campos[i].idCampo)" [name]="field.toString()" class="form-check-input" type="checkbox" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                {{field}}
+              </label>
+            </div> 
+          </div>
+        </div>
+      </div>
+      <input type="submit" class="btn btn-primary" value="Enviar Formulário">
+    </form>
+    <div class="mt-3" *ngIf="msgErro.length !== 0">
+      <h2 class="text-danger text-center">{{msgErro}}</h2>
+  </div>
+</div>
