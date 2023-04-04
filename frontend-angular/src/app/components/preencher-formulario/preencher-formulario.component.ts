@@ -82,7 +82,6 @@ export class PreencherFormularioComponent {
     this.resposta = Array();
     this.posts = new Array<PostInterface>;
     this.msgErro = "";
-    //window.location.reload();
   }
 
   onCheckBox($event: any, $id: any) {
@@ -101,6 +100,5 @@ export class PreencherFormularioComponent {
       });
     }
     console.log(this.checkbox);
-
   }
 }
