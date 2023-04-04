@@ -67,9 +67,9 @@ export class CriarFormularioComponent {
     // Armazenar o formulário em JSON local
     localStorage.setItem('formulario', JSON.stringify(this.campos));
       this.msgErro = "";
-      //this.msg = "Formulário renderizado!";
       this.campos = new Array();
-      this.router.navigate(['/forms']);
+      alert("Formulário Criado");
+      this.router.navigate(['/preencher-form']);
   }
   
 }

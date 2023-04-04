@@ -8,12 +8,16 @@ import { CriarFormularioComponent } from './components/criar-formulario/criar-fo
 import { PreencherFormularioComponent } from './components/preencher-formulario/preencher-formulario.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {HttpClientModule} from '@angular/common/http';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { InfoPageComponent } from './components/info-page/info-page.component';
 @NgModule({
   declarations: [
     AppComponent,
     CriarFormularioComponent,
     PreencherFormularioComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomePageComponent,
+    InfoPageComponent
   ],
   imports: [
     BrowserModule,
