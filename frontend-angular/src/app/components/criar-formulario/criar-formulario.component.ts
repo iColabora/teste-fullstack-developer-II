@@ -7,17 +7,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./criar-formulario.component.scss']
 })
 export class CriarFormularioComponent {
+  nomeForms: String;
   maxCampos: Number = 5;
   campos: Array<CampoInterface>;
   tiposCampos = [
     {id: 0, nome: "Texto Simples"},
     {id: 1, nome: "Texto Grande"},
-    {id: 2, nome: "Combo Box"}
+    {id: 2, nome: "Check Box"}
   ];
   msgErro: String = "";
   msg: String = "";
 
   constructor(private router: Router) {
+    this.nomeForms = "";
     this.campos = new Array();
   }
 
@@ -35,9 +37,15 @@ export class CriarFormularioComponent {
     var flagErro = 0;
 
     // Filtragem
+    if(this.nomeForms === "") {
+      this.msgErro = "Insira um nome para o formulário";
+      flagErro = -1;
+      return;
+    }
     if(this.campos.length <= 0) {
       this.msgErro = "Nenhum campo adicionado";
-        return;
+      flagErro = -1;
+      return;
     }
     this.campos.forEach(campo => {
       if(typeof campo.label !== 'string' || campo.label.length === 0) {
@@ -60,6 +68,7 @@ export class CriarFormularioComponent {
         flagErro = -1;
         return;
       }
+      campo.nomeFormulario = this.nomeForms;
     });
     
     if(flagErro === -1) return; 

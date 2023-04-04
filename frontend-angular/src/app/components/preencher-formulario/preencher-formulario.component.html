@@ -1,5 +1,5 @@
 <div class="container text-light mt-5" *ngIf="this.campos.length > 0">
-    <h1>Formulário</h1>
+    <h1>{{this.campos[0].nomeFormulario}}</h1>
     <form (ngSubmit)="enviarForm()">
       <div class="mb-3" *ngFor="let item of this.campos; let i = index;">
         <label for="formInput" class="form-label">{{this.campos[i].label}}</label>

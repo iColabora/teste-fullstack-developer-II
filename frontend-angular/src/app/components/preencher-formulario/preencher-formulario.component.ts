@@ -51,6 +51,7 @@ export class PreencherFormularioComponent {
       // Inicia cada slot da variável post com base na interface de post
       this.posts[i] = {} as PostInterface;
       this.posts[i].idCampo = this.campos[i].idCampo;
+      this.posts[i].nomeFormulario = this.campos[i].nomeFormulario;
       
       // Se for do tipo Checkbox, buscamos a id no dicionario de checkboxes e atribuimos à resposta
       if(this.campos[i].tipo === 2) {
@@ -60,7 +61,8 @@ export class PreencherFormularioComponent {
             this.posts[i].resposta = this.checkbox[key];
           }
         }
-      }else {
+
+      } else {
         // Filtro de textos
         if(this.resposta[i] == null) {
           this.msgErro = "Preencha os campos de texto";

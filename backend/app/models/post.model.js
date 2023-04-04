@@ -8,6 +8,9 @@ const Post = database.define('post', {
         allowNull: false,
         primaryKey: true
     },
+    nomeForm: {
+        type: Sequelize.STRING
+    },
     respostas: {
         type: Sequelize.JSON
     }

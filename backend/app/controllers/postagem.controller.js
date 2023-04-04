@@ -5,14 +5,19 @@ const criarPostagem = async (req, res, next) => {
     var message = "";
     var corpo = {};
     if(req.body !== null) {
+        var nomeFormulario;
         for(let i=0;i<req.body.length;i++) {
-            if(req.body[i].idCampo !== null && req.body[i].resposta !== null) {
+            if(req.body[i].idCampo !== null && req.body[i].resposta !== null && req.body[i].nomeFormulario !== null) {
                 let idCampo = req.body[i].idCampo;
                 let resposta = req.body[i].resposta;
+                nomeFormulario = req.body[i].nomeFormulario;
                 corpo[idCampo] = resposta;
             }
         }
+        console.log(nomeFormulario);
+        console.log(corpo);
         await Post.create({
+            nomeForm: nomeFormulario,
             respostas: corpo
         }).then(data => {
             status = 200;

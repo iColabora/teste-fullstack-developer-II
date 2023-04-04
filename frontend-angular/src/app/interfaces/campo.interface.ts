@@ -1,4 +1,5 @@
 export interface CampoInterface {
+    nomeFormulario: String,
     label: String,
     idCampo: String,
     // 0 - Texto Simples
