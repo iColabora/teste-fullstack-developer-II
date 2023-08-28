@@ -1,0 +1,11 @@
+# General
+.vscode/*
+_requests
+
+# API
+api/node_modules
+api/db/data
+
+
+# Interface
+interface/node_modules

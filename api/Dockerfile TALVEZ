@@ -1,0 +1,6 @@
+FROM node:18-slim
+WORKDIR /home/node/app
+CMD npm start
+
+
+https://www.youtube.com/watch?v=Kzcz-EVKBEQ

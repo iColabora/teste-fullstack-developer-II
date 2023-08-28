@@ -1,59 +1,59 @@
-# Teste II - Fullstack Development
+# Configuração do ambiente
 
-## Um pouco sobre nós
+## Servidor da base de dados
+**Requisitos**
+- NPM 9.8
+- Docker 20.10
 
-Estamos procurando uma pessoa desenvolvedora que possa agregar em nosso time, principalmente quem gosta de propor soluções e inovações. Estamos montando nosso novo time de Produtos e pra isso precisamos de pessoas que conheçam:
+**Preparação do ambiente (instalação)**
+*No console/prompt/terminal do seu sistema, navegue até o diretório raiz do projeto e insira os seguintes comandos:*
 
-- Front-end: Angular, React ou VueJS ♥️
-- Backend: NodeJS 
-- Banco de Dados: SQL / Um pouco de NoSQL
-- GIT
-- Ter trabalhado antes em equipes ágeis e multidisciplinares
+Baixar imagem do MySQL
+```
+docker pull mysql:8.1
+```
 
+Imagem do MySQL para o projeto
+```
+docker build -t icolabora-mysql81-image -f api/db/Dockerfile .
+```
 
-Mas também será ótimo se você conhecer:
+Subir o container com o servidor MySQL
+```
+docker run -d -p 3306:3306 -v docker_volumes:/var/lib/mysql --rm --name icolabora-desafio2-mysql icolabora-mysql81-image
+```
 
-- Docker e Docker-compose
-- Jenkins
-- RabbitMQ
+Para iniciar o *servidor* a API da aplicação, navegue até o diretório `./api` e insira o comando
+```
+npm i
+```
+```
+npm run start
+```
 
-Acha que se enquadra no perfil? Temos um teste abaixo para entendermos mais seu conhecimento.
+No navegador, acesse o endereço para criar as tabelas na nase de dados
+```
+http://localhost:3000/install/db-tables
+```
 
-
-## Problema
-
-Um cliente deseja criar 5 campos de forma parametrizável, sendo que ele vai definir:
-- Label a ser exibido
-- Id do campo
-- Tipo de campo (texto simples, texto grande, ou combo)
-
-**Restrições:**
-- Se o tipo de campo for texto, o máximo de caracteres é 30;
-- Se o tipo de campo for texto grande, o máximo de caracteres é 100;
-- Se o tipo de campo for combo, ele pode cadastrar até 3 opções.
-
-**Proposta**:
-
-Renderizar os campos que foram parametrizados previamente e o usuário conseguir preencher os campos e salvar (em uma base de dados*)
-
-**Tecnologias que esperamos**:
-
-**Front:**
-- Algum framework JS (Angular, React, Vue ♥️)
-- Pré-processador de estilo (SASS, Stylus, SCSS, etc)
-
-**Back:**
-- NodeJS
-
-**Armazenamento:**
-- A sua escolha (NoSQL, SQL, Cache): MySQL, MongoDB, ElasticSearch, Postgres, Node-cache, Redis, etc.
-
-**Docker**:
-- Dockerfile
-- Docker-compose
+Para instalar a *interface web*, navegue até o diretório `./intarface` e insira o comando
+```
+npm i
+```
+```
+npm run dev
+```
 
 
-## Submissão
-Para iniciar o teste, faça um fork deste repositório, crie uma branch com o seu nome completo e depois envie-nos o pull request. Se você apenas clonar o repositório não vai conseguir fazer push e depois vai ser mais complicado fazer o pull request. **Importante**: Após finalizar o teste, revisaremos e informaremos sua aprovação ou não. Se for aprovado, mandar um email para rh@icolabora.com com o seu currículo e pretensão 😄
+**Inicialização do ambiente para validação / uso**
+Para iniciar o *servidor*, navegue até o diretório `./api` e insira o comando
 
-Boa sorte! =D
+```
+npm run start
+```
+
+Para iniciar a *interface web*, navegue até o diretório `./intarface` e insira o comando
+
+```
+npm run dev
+```

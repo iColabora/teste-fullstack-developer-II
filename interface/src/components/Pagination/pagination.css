@@ -1,0 +1,18 @@
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.pagination-button {
+    border: #dfdfdf 1px solid;
+    min-width: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.pagination-button:hover {
+    background-color: #dfdfdf;
+}
